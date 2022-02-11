@@ -1,5 +1,27 @@
 const MAPDATA = [
   {
+    name: "Anvil",
+    url: "/maps/anvil/{z}_{x}_{y}.jpg",
+    heightmap: {
+      url: "/heightmaps/anvil.jpg",
+      tile: "/heightmaps/anvil/{z}_{x}_{y}.jpg",
+    },
+    locations: [
+      ["Village", [2000, 760]],
+    ],
+    extra: { // extra information taken from SquadSDK and exported heightmap, used to scale + crop heightmaps
+      // check printMapExtras() function for more information
+      scale: [0.75, 0.75, 0.45], // x, y & z scale from SquadSDK (in meters)
+      levels: [460, 1700], //46,170
+      minimap: [ // taken from blueprints in SquadSDK
+        [-2040, -2040],
+        [1020, 1020],
+      ],
+      hDim: [4081, 4081], // dimensions of exported heightmap
+      lOrigin: [-2040, -2040], // origin of landscape in SquadSDK (sometimes extracted by placing actor in corner)
+    },
+  },
+  {
     name: "Al Basrah",
     url: "/maps/albasrah/{z}_{x}_{y}.jpg",
     heightmap: {
@@ -24,10 +46,10 @@ const MAPDATA = [
       scale: [1, 1, 0.1], // x, y & z scale from SquadSDK (in meters)
       levels: [2123, 4417],
       minimap: [ // taken from blueprints in SquadSDK
-        [-1600, -1600],
-        [1600, 1600],
+        [-1520, -1520],
+        [1520, 1520],
       ],
-      hDim: [4065, 4065], // dimensions of exported heightmap
+      hDim: [3556, 3556], // dimensions of exported heightmap
       lOrigin: [-2032, -2032], // origin of landscape in SquadSDK (sometimes extracted by placing actor in corner)
     },
   },
@@ -47,13 +69,13 @@ const MAPDATA = [
       ["Russia Main", [558, 2866]],
     ],
     extra: {
-      scale: [1, 1, 1],
+      scale: [1, 1, 1.2],
       levels: [0, 726],
       minimap: [
-        [-1954, -2080],
-        [1950, 1825],
+        [-1954, -1825],
+        [1950, -2080],
       ],
-      hDim: [4033, 4033],
+      hDim: [4032, 4032],
       lOrigin: [-2016, -2142],
     },
   },
@@ -170,6 +192,27 @@ const MAPDATA = [
     },
   },
   {
+    name: "Goose Bay",
+    url: "/maps/goosebay/{z}_{x}_{y}.jpg",
+    heightmap: {
+      url: "/heightmaps/goosebay.jpg",
+      tile: "/heightmaps/goosebay/{z}_{x}_{y}.jpg",
+    },
+    locations: [
+      ["Militia Main", [139, 852]],
+    ],
+    extra: {
+      scale: [1, 1, 0.4],
+      levels: [3069, 10000],
+      minimap: [
+        [-2016, -2016],
+        [2016, 2016],
+      ],
+      hDim: [4065, 4065],
+      lOrigin: [-2032, -2032],
+    },
+  },
+  {
     name: "Gorodok",
     url: "/maps/gorodok/{z}_{x}_{y}.jpg",
     heightmap: {
@@ -190,11 +233,11 @@ const MAPDATA = [
       scale: [1, 1, 10],
       levels: [781, 900],
       minimap: [
-        [-2070, -2070],
-        [2270, 2270],
+        [-2032, 2032],
+        [2032, -2032],
       ],
-      hDim: [4033, 4033],
-      lOrigin: [-2016, -2016],
+      hDim: [4065, 4065],
+      lOrigin: [-2032, -2032],
     },
 
   },
@@ -372,6 +415,27 @@ const MAPDATA = [
       ],
       hDim: [2773, 1891],
       lOrigin: [-1386, -1260],
+    },
+  }, 
+  {
+    name: "Manic-5",
+    url: "/maps/manic/{z}_{x}_{y}.jpg",
+    heightmap: {
+      url: "/heightmaps/manic.jpg",
+      tile: "/heightmaps/manic/{z}_{x}_{y}.jpg",
+    },
+    locations: [
+      ["Militia Main", [1062, 233]],
+    ],
+    extra: {
+      scale: [1, 1, 3],
+      levels: [2479, 5898],
+      minimap: [
+        [-2016, -2016],
+        [2016, 2016],
+      ],
+      hDim: [4065, 4065],
+      lOrigin: [-2023, -2032],
     },
   },
   {
@@ -567,8 +631,8 @@ const MAPDATA = [
       scale: [1, 1, 4],
       levels: [70, 753],
       minimap: [
-        [-2500, -2500],
-        [2500, 2500],
+        [-3301, -3301],
+        [3048, 3048],
       ],
       hDim: [8129, 8129],
       lOrigin: [-4064, -4064],
