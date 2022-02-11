@@ -429,7 +429,7 @@ const MAPDATA = [
     ],
     extra: {
       scale: [1, 1, 3],
-      levels: [2479, 5898],
+      levels: [110, 800], //11,80
       minimap: [
         [-2016, -2016],
         [2016, 2016],
